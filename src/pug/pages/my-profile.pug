@@ -1,0 +1,152 @@
+extends ../layouts/_layout_default-2
+
+block title 
+    title House To Home | My Profile
+
+block content
+    section.breadcrumbWrapper
+        .container
+            ol.breadcrumb
+                li.breadcrumb-item
+                    a(href='/') Home
+                li.breadcrumb-item.active(aria-current='page')  My Profile
+    
+    section.myProfile
+        .container
+            .heading
+                h1
+                    span My 
+                    span.red Profile  
+            
+            form.myProfileForm
+                .row.justify-content-center
+                    .col-12.col-sm-10.col-md-8.col-lg-6
+                        h2.heading--2
+                            span.heading__content.
+                                personal information
+
+                        .form-group
+                            label(for="proName") Display name
+                            input#proName.form-control(type="text" name="proName" value="David Nguyen")
+
+                        .row
+                            .col-12.col-md-6
+                                .form-group
+                                    label(for="proFirstName") FIRST NAME
+                                    input#proFirstName.form-control(type="text" name="proFirstName" value="David")
+
+                            .col-12.col-md-6
+                                .form-group
+                                    label(for="proLastName") LAST NAME
+                                    input#proLastName.form-control(type="text" name="proLastName" value="Nguyen")
+                        
+                        .row
+                            .col-12.col-md-6
+                                .form-group
+                                    label(for="proGender") GENDER
+                                    select#proGender.form-control.selectui(name="proGender")
+                                        option(value="") Select
+                                        option(value="man") Man
+                                        option(value="women") Women
+                                    
+
+                            .col-12.col-md-6
+                                .form-group
+                                    label(for="proMarital") marital status
+                                    select#proMarital.form-control.selectui(name="proMarital")
+                                        option(value="") Select
+                                        option(value="1") Option 1
+                                        option(value="2") Option 2
+                        
+                        .row
+                            .col-12.col-md-6
+                                .form-group
+                                    label(for="proUserType") User Type
+                                    select#proUserType.form-control.selectui(name="proUserType")
+                                        option(value="") Select
+                                        option(value="1") Option 1
+                                        option(value="2") Option 2
+                                    
+
+                            .col-12.col-md-6
+                                .form-group
+                                    label(for="proNationality") Nationality
+                                    select#proNationality.form-control.selectui(name="proNationality")
+                                        option(value="") Select
+                                        option(value="1") Option 1
+                                        option(value="2") Option 2
+                        
+                        .row
+                            .col-12.col-md-6
+                                .form-group
+                                    label(for="proEthnicity") Ethnicity
+                                    select#proEthnicity.form-control.selectui(name="proEthnicity")
+                                        option(value="") Select
+                                        option(value="1") Option 1
+                                        option(value="2") Option 2
+                                    
+
+                            .col-12.col-md-6
+                                .form-group
+                                    label(for="proBirth") Date of birth
+                                    
+                                    .input-group#proBirthWrap
+                                        input#proBirth.form-control.selectui(type="text" name="proBirth" placeholder="Select")
+                                        .input-group-append
+                                            span.input-group-text: i.fa.fa-calendar
+
+                        .form-group.language
+                            label Language
+                            .custom-control.custom-checkbox.custom-control-inline
+                                input#language1.custom-control-input(type='checkbox', name='languageEn' value="en")
+                                label.custom-control-label(for='language1') English
+                            .custom-control.custom-checkbox.custom-control-inline
+                                input#language2.custom-control-input(type='checkbox', name='languageCn' value="cn")
+                                label.custom-control-label(for='language2') Chinese
+                            .custom-control.custom-checkbox.custom-control-inline
+                                input#language3.custom-control-input(type='checkbox', name='languageMY' value="my")
+                                label.custom-control-label(for='language3') Malay
+                            .custom-control.custom-checkbox.custom-control-inline
+                                input#language4.custom-control-input(type='checkbox', name='languageIn' value="in")
+                                label.custom-control-label(for='language4') Tamil
+
+                        
+                        .row
+                            .col-12.col-md-6
+                                .form-group
+                                    label(for="proEmail") Email
+                                    input#proEmail.form-control(type="email" name="proEmail" value="davidnguyen@gmailcom")
+
+                            .col-12.col-md-6
+                                .form-group
+                                    label(for="proMobile") Mobile
+                                    input#proMobile.form-control(type="tel" name="proMobile" value="(+65) 091.234.567")
+                        
+                        h2.heading--2
+                            span.heading__content.
+                                change password
+                        
+                        .row
+                            .col-12.col-md-6
+                                .form-group
+                                    label(for="proPass") new password
+                                    input#proPass.form-control(type="password" name="proPass" placeholder="Enter password")
+
+                            .col-12.col-md-6
+                                .form-group
+                                    label(for="proRePass") retype password
+                                    input#proRePass.form-control(type="password" name="proRePass" placeholder="Enter password")
+
+
+                        .form-btn.text-center
+                            button.btn.btn-danger(type="submit") Save Changes
+
+
+block js
+    script.
+        $(function () {
+            // Date Only
+            $('#proBirthWrap').datetimepicker({
+                format: 'L'
+            });
+        });

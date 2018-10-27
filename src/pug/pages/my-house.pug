@@ -1,0 +1,135 @@
+extends ../layouts/_layout_default-2
+
+block title 
+    title House To Home | My House
+
+block content
+    section.breadcrumbWrapper
+        .container
+            ol.breadcrumb
+                li.breadcrumb-item
+                    a(href='/') Home
+                li.breadcrumb-item.active(aria-current='page')  My House
+    
+    section.costSection
+        .container
+            .heading
+                h1
+                    span My 
+                    span.red House
+            
+            .houseBox
+                .row
+                    .col-12.col-sm-6.col-md-4.col-lg-3
+                        .houseItem
+                            .houseItem__img(style="background-image: url("+imgDataPath+"buy/house1.png)")
+                                img(src= imgDataPath + "buy/house1.png", alt="") 
+                            .houseItem__body
+                                h2.houseItem__title 
+                                    a(href="#" title="HDB-Dragone") HDB-Dragone
+                                p.houseItem__price $789,000
+                                p.houseItem__location
+                                    i.fa.fa-map-marker 
+                                    | 130 Clarece Lane
+                            .houseItem__footer
+                                a.houseItem__del(href="#"): i.ic-delete
+                                a.houseItem__edit(href="#"): i.ic-edit
+                                a.houseItem__mark(href="#")
+                                    i.ic-mark
+                                    span Mark as Sold
+                    
+                    .col-12.col-sm-6.col-md-4.col-lg-3
+                        .houseItem
+                            .houseItem__img(style="background-image: url("+imgDataPath+"buy/house2.png)")
+                                img(src= imgDataPath + "buy/house2.png", alt="")  
+                            .houseItem__body
+                                h2.houseItem__title 
+                                    a(href="#" title="HDB-Dragone") HDB-Dragone
+                                p.houseItem__price $789,000
+                                p.houseItem__location
+                                    i.fa.fa-map-marker 
+                                    | 130 Clarece Lane
+                            .houseItem__footer
+                                a.houseItem__del(href="#"): i.ic-delete
+                                a.houseItem__edit(href="#"): i.ic-edit
+                                a.houseItem__mark.sold(href="#")
+                                    i.ic-mark
+                                    span Unmark Sold
+
+                    .col-12.col-sm-6.col-md-4.col-lg-3
+                        .houseItem
+                            .houseItem__img(style="background-image: url("+imgDataPath+"buy/house3.png)")
+                                img(src= imgDataPath + "buy/house3.png", alt="") 
+                            .houseItem__body
+                                h2.houseItem__title 
+                                    a(href="#" title="HDB-Dragone") HDB-Dragone
+                                p.houseItem__price $789,000
+                                p.houseItem__location
+                                    i.fa.fa-map-marker 
+                                    | 130 Clarece Lane
+                            .houseItem__footer
+                                a.houseItem__del(href="#"): i.ic-delete
+                                a.houseItem__edit(href="#"): i.ic-edit
+                                a.houseItem__mark(href="#")
+                                    i.ic-mark
+                                    span Mark as Sold
+
+                    .col-12.col-sm-6.col-md-4.col-lg-3
+                        .houseItem
+                            .houseItem__img(style="background-image: url("+imgDataPath+"buy/house4.png)")
+                                img(src= imgDataPath + "buy/house4.png", alt="") 
+                            .houseItem__body
+                                h2.houseItem__title 
+                                    a(href="#" title="HDB-Dragone") HDB-Dragone
+                                p.houseItem__price $789,000
+                                p.houseItem__location
+                                    i.fa.fa-map-marker 
+                                    | 130 Clarece Lane
+                            .houseItem__footer
+                                a.houseItem__del(href="#"): i.ic-delete
+                                a.houseItem__edit(href="#"): i.ic-edit
+                                a.houseItem__mark(href="#")
+                                    i.ic-mark
+                                    span Mark as Sold
+                    
+                    .col-12.col-sm-6.col-md-4.col-lg-3
+                        .houseItem
+                            .houseItem__img(style="background-image: url("+imgDataPath+"buy/house5.png)")
+                                img(src= imgDataPath + "buy/house5.png", alt="") 
+                            .houseItem__body
+                                h2.houseItem__title 
+                                    a(href="#" title="HDB-Dragone") HDB-Dragone
+                                p.houseItem__price $789,000
+                                p.houseItem__location
+                                    i.fa.fa-map-marker 
+                                    | 130 Clarece Lane
+                            .houseItem__footer
+                                a.houseItem__del(href="#"): i.ic-delete
+                                a.houseItem__edit(href="#"): i.ic-edit
+                                a.houseItem__mark(href="#")
+                                    i.ic-mark
+                                    span Mark as Sold
+
+                    .col-12.col-sm-6.col-md-4.col-lg-3
+                        .houseItem
+                            .houseItem__img(style="background-image: url("+imgDataPath+"buy/house6.png)")
+                                img(src= imgDataPath + "buy/house6.png", alt="") 
+                            .houseItem__body
+                                h2.houseItem__title 
+                                    a(href="#" title="HDB-Dragone") HDB-Dragone
+                                p.houseItem__price $789,000
+                                p.houseItem__location
+                                    i.fa.fa-map-marker 
+                                    | 130 Clarece Lane
+                            .houseItem__footer
+                                a.houseItem__del(href="#"): i.ic-delete
+                                a.houseItem__edit(href="#"): i.ic-edit
+                                a.houseItem__mark(href="#")
+                                    i.ic-mark
+                                    span Mark as Sold
+                    
+                    .col-12.col-sm-6.col-md-4.col-lg-3
+                        .houseItem.houseItem--add
+                            .houseItem__body
+                                a.houseItem__add(href="/pages/post-house-1.html" title="Add House") 
+                                    span Add House

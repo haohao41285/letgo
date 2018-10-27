@@ -1,0 +1,95 @@
+extends ../layouts/_layout_default-1
+block setting   
+    - var mainActive = 'cost'
+
+block title 
+    title House To Home | DIY Guides - Cost
+
+block content
+    section.breadcrumbWrapper
+        .container
+            ol.breadcrumb
+                li.breadcrumb-item
+                    a(href='/') Home
+                li.breadcrumb-item
+                    span DIY Guides
+                li.breadcrumb-item.active(aria-current='page')  Cost
+    
+    section.costSection
+        .container
+            .heading
+                h1
+                    span Cost guide - 
+                    span.red Buyers and Sellers
+                    small The real Cost of Selling and Buying an 
+            
+            nav
+                #cost-tab.nav.nav-tabs.justify-content-center(role='tablist')
+                    a#nav-a-seller.nav-item.nav-link.active(data-toggle='tab', href='#a-seller', role='tab', aria-controls='a-seller', aria-selected='true') I'm a Seller
+                    a#nav-a-buyer.nav-item.nav-link(data-toggle='tab', href='#a-buyer', role='tab', aria-controls='a-buyer', aria-selected='false') I'm a Buyer
+            #cost-tabContent.tab-content
+                #a-seller.tab-pane.fade.show.active(role='tabpanel', aria-labelledby='nav-a-seller') 
+                    h2 Are you Selling Your HBD? 
+                        small Here's an overview of the various costs related to selling an HDB
+                    
+                    .iconBox
+                        .row
+                            .col-12.col-sm-6.col-md-4
+                                .iconItem
+                                    i.iconItem__icon
+                                        img(src= imgPath + "guides-cost/ic-resales.svg", alt="")
+                                    h3.iconItem__title Resales Application <br />Administrative Fees
+                                    .iconItem__content
+                                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                            
+                            .col-12.col-sm-6.col-md-4
+                                .iconItem
+                                    i.iconItem__icon
+                                        img(src= imgPath + "guides-cost/ic-legal.svg", alt="")
+                                    h3.iconItem__title Legal Fees
+                                    .iconItem__content
+                                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+                            
+                            .col-12.col-sm-6.col-md-4
+                                .iconItem
+                                    i.iconItem__icon
+                                        img(src= imgPath + "guides-cost/ic-tax.svg", alt="")
+                                    h3.iconItem__title Property Tax
+                                    .iconItem__content
+                                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea 
+                            
+                            .col-12.col-sm-6.col-md-4
+                                .iconItem
+                                    i.iconItem__icon
+                                        img(src= imgPath + "guides-cost/ic-service.svg", alt="")
+                                    h3.iconItem__title Service & Conservancy charges
+                                    .iconItem__content
+                                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                            
+                            .col-12.col-sm-6.col-md-4
+                                .iconItem
+                                    i.iconItem__icon
+                                        img(src= imgPath + "guides-cost/ic-upgrading.svg", alt="")
+                                    h3.iconItem__title Upgrading Levy (if any)
+                                    .iconItem__content
+                                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+
+                            .col-12.col-sm-6.col-md-4
+                                .iconItem
+                                    i.iconItem__icon
+                                        img(src= imgPath + "guides-cost/ic-chart.svg", alt="")
+                                    h3.iconItem__title Upgrading Costs (if any)
+                                    .iconItem__content
+                                        p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+
+                #a-buyer.tab-pane.fade(role='tabpanel', aria-labelledby='nav-a-buyer') 
+                    p
+                        | Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus a tempus augue. Integer sit amet neque dapibus, suscipit libero vitae, sagittis tellus. Fusce nibh justo, rhoncus ac condimentum ac, cursus vel ligula. Donec pretium venenatis elementum. Pellentesque at elit vitae dolor dapibus tincidunt. Donec ac arcu non risus pellentesque placerat. Sed mollis sem at massa elementum, ac sagittis justo varius. Proin et sollicitudin risus. Nulla interdum tortor ac velit gravida accumsan. Fusce lobortis eu sapien quis sollicitudin. In eu purus ultricies, ultrices arcu non, laoreet massa.
+                    p
+                        | Sed quis massa aliquam, volutpat velit et, dictum elit. Proin lacinia lacinia tortor, et finibus eros convallis vel. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Proin enim arcu, hendrerit ut condimentum in, maximus non enim. Ut lacinia libero a sodales euismod. Pellentesque in varius odio. Suspendisse tempor ornare mi, id ullamcorper eros vestibulum at. Nulla facilisi.
+                    p
+                        | Pellentesque eget vulputate turpis. Donec aliquet, lorem id fringilla auctor, elit diam auctor massa, in blandit magna lacus vitae turpis. Donec eu diam ornare, lacinia arcu eu, aliquet lacus. Cras varius ante non nunc eleifend euismod. Phasellus dapibus auctor interdum. Ut iaculis, velit sed luctus euismod, risus erat interdum eros, eu ultricies augue nunc quis neque. Vivamus congue magna vel sapien commodo rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hac habitasse platea dictumst. Mauris at lectus nec leo aliquam auctor. Sed dictum augue quis elit dictum, quis accumsan urna sodales. Phasellus mattis tempor rutrum. Proin nec laoreet ante. Cras pretium urna vel dui porttitor tempus. Integer nec aliquam dui, ac tempor dui. Integer ultricies elit sed mollis ornare.
+                    p
+                        | Vestibulum neque ante, pellentesque id ornare et, posuere ut risus. Nullam faucibus sapien eget arcu scelerisque, vel dapibus metus interdum. Duis maximus nisl id malesuada posuere. Nam feugiat urna id lacus rutrum, sed lacinia dui placerat. Ut ullamcorper ullamcorper urna, in aliquet arcu semper et. In hac habitasse platea dictumst. Quisque quis volutpat massa. Curabitur accumsan aliquam facilisis. Curabitur sit amet lorem libero. Etiam sollicitudin enim sit amet turpis iaculis semper. Morbi luctus pharetra dolor at malesuada. Maecenas cursus porttitor mauris, ac porta ex laoreet nec. Proin a felis est.
+                    p
+                        | Sed nec mattis lacus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nullam diam nisl, mollis sit amet erat sit amet, semper mattis mauris. Maecenas fringilla nunc sed ante ullamcorper, vel semper mauris varius. Quisque congue, sapien eu tristique dapibus, magna nisl lobortis metus, in laoreet nisi arcu sit amet tellus. Proin vestibulum interdum ante, sit amet posuere odio consequat ut. In sit amet risus purus. Sed condimentum nibh id felis sagittis, sit amet rhoncus justo aliquam. Duis eget euismod tortor, non auctor dui. Maecenas in nulla et neque dapibus mattis vitae a massa. Phasellus sit amet odio sed erat porta commodo sed id lacus. Sed ligula est, rutrum molestie vestibulum vitae, egestas sit amet odio.

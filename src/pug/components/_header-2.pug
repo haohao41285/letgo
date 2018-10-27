@@ -1,0 +1,36 @@
+header.headerOverride
+    .container
+        .header
+            .row.align-items-center
+                .col-lg-4
+                    a.logo(href="/index.html")
+                        img(src="/images/logo.svg", alt="Logo")
+                    a(href="#" class="header__toggle")
+                        span
+                        span
+                        span
+                        span
+                .col-lg-4
+                    .wrapMenu
+                        .menuMain
+                            +menuNav(mainActive,slideMenu, '', '', 'nav-menu', '' ,'nav-item', 'nav-link')
+                .col-lg-4
+                    .header__login
+                        .dropdown
+                            a#dropdownMenuLink.btn.btn-secondary.dropdown-toggle(href='#', role='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false')
+                                span(style="background-image: url(/images/icon-user.png)") 
+                                    span   David Nguyen
+                            .dropdown-menu(aria-labelledby='dropdownMenuLink')
+                                a.dropdown-item(href='/pages/my-profile.html') 
+                                    span(style="background-image: url(/images/icon-edit.png)")
+                                    span    My profile
+                                a.dropdown-item(href='/pages/my-house.html') 
+                                    span(style="background-image: url(/images/icon-house.png)")
+                                    span    My houses
+                                a.dropdown-item(href='#') 
+                                    span(style="background-image: url(/images/icon-logout.png)")
+                                    span    log out
+                        a(href="#" class="goToList")
+                            i.icon_plus_alt
+                            span   List your house
+// End Header

@@ -1,0 +1,264 @@
+$houseItem-color: #ebebeb;
+
+.houseBox {
+    padding-bottom: 50px;
+    min-height: calc(100vh - 125px - 64px - 80px - 70px);
+}
+
+.houseItem {
+    margin-bottom: 20px;
+
+    &__img {
+        @include bg-box(280, 185);
+    }
+
+    &__title {
+        font-size: rem(20);
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        margin: 0 0 em(2,20);
+        line-height: 1;
+        text-transform: uppercase;
+        color: inherit;
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis;
+        a {
+            color: inherit;
+        }
+    }
+
+    &__price {
+        font-size: rem(20);
+        font-weight: 700;
+        color: $danger;
+        letter-spacing: 0.05em;
+        line-height: (23/20);
+        margin: 0 0 em(5, 20);
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+    &__location {
+        font-size: 1em;
+        margin: 0;
+        white-space: nowrap; 
+        overflow: hidden;
+        text-overflow: ellipsis;
+        font-weight: 500;
+
+        i {
+            margin-right: 6px;
+        }
+    }
+
+    &__body {
+        padding: 15px 20px 20px;
+        border: 1px solid $houseItem-color;
+        border-width: 0 1px;
+    }
+
+    &__footer {
+        border: 1px solid $houseItem-color;
+        background: #f8f8f8;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        > * {
+            display: block;
+            flex-basis: 0;
+            flex-grow: 1;
+            max-width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-right: 1px solid $houseItem-color;
+            line-height: em(18, 16);
+            padding: em(15, 16) 0;
+
+
+            &.houseItem__del,
+            &.houseItem__edit {
+                max-width: rem(48);
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+
+            &.houseItem__mark {
+                color: #666;
+                i {
+                    margin-right: 11px;
+                }
+
+                &:hover {
+                    color: $danger;
+                }
+
+                &.sold {
+                    color: $orange;
+                    i.ic-mark {
+                        background-image: url( $image-path + 'ic-unmark.svg' );
+                    }
+                }
+            }
+
+            &:last-child {
+                border-right: none;
+            }
+
+        }
+
+        i {
+            display: inline-block;
+            width: em(18, 16);
+            height: em(18, 16);
+            background: {
+                position: center;
+                repeat: no-repeat;
+                size: contain;
+            }
+
+            &.ic-delete {
+                background-image: url( $image-path + 'ic-delete.svg' );
+            }
+
+            &.ic-edit {
+                background-image: url( $image-path + 'ic-edit.svg' );
+            }
+            &.ic-mark {
+                background-image: url( $image-path + 'ic-mark.svg' );
+            }
+        }
+    }
+
+    &--add {
+        border: 1px dashed #cccccc;
+        border-radius: 8px;
+        position: relative;
+        @include bg-box(280, 344);
+
+        .houseItem__body {
+            position: absolute;
+            border: none;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            background: $houseItem-color;
+
+            &:before {
+                content: "";
+                display: block;
+                position: absolute;
+                top: percentage(-30/322);
+                left: 0;
+                right: 0;
+                height: 100%;
+                background: {
+                    position: center;
+                    size: percentage(215/260) auto;
+                    repeat: no-repeat;
+                    image: url( $image-path + 'ic-home-lg.svg' );
+                }
+            }
+            .houseItem__add {
+                position: absolute;
+                top: percentage(191/326);
+                left: 50%;
+                margin-left: em(-25, 16);
+                width: em(50, 16);
+                height: em(50, 16);
+                border-radius: 50%;
+                background: $teal;
+                box-shadow: 0 5px 16px rgba($black, 0.11);
+                color: inherit;
+                @include transition();
+
+                &:before,
+                &:after {
+                    content: "";
+                    display: block;
+                    background: #fff;
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                }
+
+                &:before {
+                    width: 2px;
+                    height: 16px;
+                    margin-left: -1px;
+                    margin-top: -8px;
+                }
+
+                &:after {
+                    width: 16px;
+                    height: 2px;
+                    margin-left: -8px;
+                    margin-top: -1px;
+                }
+
+                span {
+                    position: absolute;
+                    display: block;
+                    top: 100%;
+                    left: 50%;
+                    transform: translate(-50%, 0);
+                    color: inherit;
+                    white-space: nowrap; 
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    margin-top: em(18, 16);
+                    font-weight: 700;
+                    text-transform: uppercase;
+                }
+
+                &:hover {
+                    background-color: $danger;
+                }
+            }
+        }
+        &.upload {
+            @include bg-box(180, 180);
+            .houseItem__body {
+                &:after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: percentage(-30/322);
+                    left: 0;
+                    right: 0;
+                    height: 100%;
+                    background: {
+                        position: center;
+                        size: 45%;
+                        repeat: no-repeat;
+                        image: url( $image-path + 'upload.svg' );
+                    }
+                }
+                .houseItem__add {
+                    position: relative;
+                    z-index: 1;
+                    top: 50%;
+                    .custom-file {
+                        label {
+                            position: absolute;
+                            display: block;
+                            top: 100%;
+                            left: 50%;
+                            transform: translate(-50%, 0);
+                            color: inherit;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+                            margin-top: 15px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

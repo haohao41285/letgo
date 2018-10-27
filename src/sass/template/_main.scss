@@ -1,0 +1,75 @@
+
+.ic-clock{
+    background-image: url($image-path + 'icons/ic-pass.svg');   
+    width: rem(46);
+    height: rem(37);
+    background-repeat: no-repeat;
+    background-position: center center;
+    position:relative;
+    &:before{
+        content:'';
+        position:absolute;
+        top:rem(3);
+        bottom:rem(3);
+        right:0;
+        width:1px;
+        background:#cacaca;
+    }
+
+}
+i.icon_lock-open_alt {
+    font-size: 20px;
+    color: #959595;
+    position: absolute;
+    top: 50%;
+    left: 13px;
+    transform: translate(0, -50%);
+    padding-right: 15px;
+    border-right: 1px solid;
+    & + input {
+        padding-left: 60px;
+    }
+}
+button:focus {
+    outline:none;
+}
+.custom-checkbox{
+    .custom-control-label{
+        color:$color-body;
+        &::before{
+            background:#fff;
+            border:1px solid #bfd6f1;
+        }
+    }
+}
+.ic-email{
+    background:url($image-path + "icons/ic-mail.svg");
+}
+.ic-user{
+    background:url($image-path + "icons/ic-user.svg");
+}
+.ic-pass{
+    background:url($image-path + "icons/ic-clock.svg");
+}
+.ic-code{
+    background:url($image-path + "icons/ic-code.svg");
+}
+.ic-phone{
+    background:url($image-path + "icons/ic-phone.svg");
+}
+.ic-agency{
+    background:url($image-path + "icons/ic-building.svg");
+}
+.ic-building{
+    background:url($image-path + "icons/ic-building-1.svg");
+}
+.ic-street{
+    background:url($image-path + "icons/ic-street.svg");
+}
+.ic-calendar{
+    background:url($image-path + "icons/ic-calendar.svg");
+}
+@media (max-width: 480px){.break480{
+    flex: 0 0 100%;
+    max-width: 100%;
+}}

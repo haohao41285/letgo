@@ -1,0 +1,397 @@
+extends layouts/_layout_default
+
+block title 
+    title House To Home | Trang chủ
+
+block content
+    section.banner
+        .banner__wrapper
+            .banner__item
+                +bgImg(imgDataPath + 'home/banner1.png', 'banner__item__image', "Banner Home 1")
+                .info
+                    .container
+                        .content
+                            h3  D.I.Y your house 
+                            h3  transaction
+                            p
+                                i.arrow_carrot-2right
+                                span    No Advertisement cost
+                            p
+                                i.arrow_carrot-2right
+                                span    No Agent cost
+                            a(href="" class="btnPrimary")
+                                |   learn more
+            .banner__item
+                +bgImg(imgDataPath + 'home/banner2.png', 'banner__item__image', "Banner Home 2")
+                .info
+                    .container
+                        .content
+                            h3  Hassle-Free Premium agent service 
+                            h3  Fixed Agent fee of $2600
+                            p
+                                i.arrow_carrot-2right
+                                span    Best part is you only need to pay if the sale is transacted by us.
+                            a(href="" class="btnPrimary")
+                                |   learn more
+    section.search
+        .container
+            .row.align-items-center
+                include modules/_search-section
+                .col-lg-3.col-md-12
+                    .newsLaunch
+                        a(href="" class="btnPrimary btnNewsLaunch")
+                            |   Lasted News Launch
+
+        //login form   
+        #loginModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true').loginForm
+            .modal-dialog(role='document')
+                .modal-content
+                    button.close(type='button', data-dismiss='modal', aria-label='Close')
+                        i.icon_close
+                    .modal-body
+                        h4.heading--5 D.I.Y your transaction
+                        form(action="")
+                            .form-style
+                                .form-group
+                                    .input-group
+                                        .input-group-prepend
+                                            button.btn-flag.dropdown-toggle.btn-flag-1(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') 
+                                                span.f-phone +65
+                                            .dropdown-menu.dropdown-flags
+                                                ul
+                                                    li
+                                                        a(href="#") 
+                                                            span.ic-flag
+                                                                img(src=imgDataPath + "flags/sin.png" alt="")
+                                                            span.f-text Singapore
+                                                            span.f-phone +65
+                                                    li
+                                                        a(href="#") 
+                                                            span.ic-flag
+                                                                img(src=imgDataPath + "flags/malay.png" alt="")
+                                                            span.f-text Malaysia
+                                                            span.f-phone +60
+                                                    li
+                                                        a(href="#") 
+                                                            span.ic-flag
+                                                                img(src=imgDataPath + "flags/indo.png" alt="")
+                                                            span.f-text Indonesia
+                                                            span.f-phone +62
+                                                    li
+                                                        a(href="#") 
+                                                            span.ic-flag
+                                                                img(src=imgDataPath + "flags/philip.png" alt="")
+                                                            span.f-text Philippines
+                                                            span.f-phone +63
+                                                    li
+                                                        a(href="#") 
+                                                            span.ic-flag
+                                                                img(src=imgDataPath + "flags/india.png" alt="")
+                                                            span.f-text India
+                                                            span.f-phone +91
+                                                    li
+                                                        a(href="#") 
+                                                            span.ic-flag
+                                                                img(src=imgDataPath + "flags/china.png" alt="")
+                                                            span.f-text China 
+                                                            span.f-phone +86
+                                        input.form-control(type='text',placeholder='Phone number')
+                                
+                                .form-group
+                                    .input-group
+                                        .input-group-prepend
+                                            span.ic-clock
+                                        input.form-control(type='password',placeholder='Password')
+                                    label#phone-error.error(for='phone', style='') This field is required.
+
+                                .row
+                                    .col-6
+                                        .custom-control.custom-checkbox
+                                            input#customRemember.custom-control-input(type='checkbox')
+                                            label.custom-control-label(for='customRemember') Remember me
+                                    .col-6.text-right
+                                        a(href="#") Forgot password?
+                                button(type="submit").btn-sign
+                                    span Sign In  
+                                .heading--6 
+                                    span or Sign In with
+                                .row
+                                    .col-6
+                                        button(type="submit").btn-sb.btn-fb
+                                            i.fa.fa-facebook
+                                            span Facebook
+                                    .col-6
+                                        button(type="submit").btn-sb.btn-google
+                                            i.fa.fa-google
+                                            span Google
+                                .form-group--other Don't have an account? <a href="#">Sign Up</a>
+
+        //signUpModal
+        #signUpModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true').loginForm
+            .modal-dialog(role='document')
+                .modal-content
+                    button.close(type='button', data-dismiss='modal', aria-label='Close')
+                        i.icon_close
+                    .modal-body         
+                        form(action="")
+                            .form-style.form-style--2
+                                h4.heading--5 Sign Up For Free
+                                .form-group
+                                    .input-group
+                                        .input-group-prepend
+                                            button.btn-flag.dropdown-toggle.btn-flag-2(type='button', data-toggle='dropdown', aria-haspopup='true', aria-expanded='false') 
+                                                span.ic-flag
+                                                    img(src=imgDataPath + "flags/sin.png" alt="")
+                                                span.f-phone +65
+                                            .dropdown-menu.dropdown-flags
+                                                ul
+                                                    li
+                                                        a(href="#") 
+                                                            span.ic-flag
+                                                                img(src=imgDataPath + "flags/sin.png" alt="")
+                                                            span.f-text Singapore
+                                                            span.f-phone +65
+                                                    li
+                                                        a(href="#") 
+                                                            span.ic-flag
+                                                                img(src=imgDataPath + "flags/malay.png" alt="")
+                                                            span.f-text Malaysia
+                                                            span.f-phone +60
+                                                    li
+                                                        a(href="#") 
+                                                            span.ic-flag
+                                                                img(src=imgDataPath + "flags/indo.png" alt="")
+                                                            span.f-text Indonesia
+                                                            span.f-phone +62
+                                                    li
+                                                        a(href="#") 
+                                                            span.ic-flag
+                                                                img(src=imgDataPath + "flags/philip.png" alt="")
+                                                            span.f-text Philippines
+                                                            span.f-phone +63
+                                                    li
+                                                        a(href="#") 
+                                                            span.ic-flag
+                                                                img(src=imgDataPath + "flags/india.png" alt="")
+                                                            span.f-text India
+                                                            span.f-phone +91
+                                                    li
+                                                        a(href="#") 
+                                                            span.ic-flag
+                                                                img(src=imgDataPath + "flags/china.png" alt="")
+                                                            span.f-text China 
+                                                            span.f-phone +86
+                                        input.form-control(type='text',placeholder='Phone number')
+                                    button.btn-sb.btn-sb--1(data-toggle="modal" ,data-dismiss='modal',  data-target="#digitModal")
+                                        i.fa.fa-long-arrow-right
+                                .heading--6 
+                                    span or Sign In with
+                                .row
+                                    .col-sm-6
+                                        button(type="submit").btn-sb.btn-fb
+                                            i.fa.fa-facebook
+                                            span Facebook
+                                    .col-sm-6
+                                        button(type="submit").btn-sb.btn-google
+                                            i.fa.fa-google
+                                            span Google
+                                .form-group--other Don't have an account? <a href="#">Sign Up</a>         
+        //digit code    
+        #digitModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true').loginForm.digitForm
+            .modal-dialog(role='document')
+                .modal-content
+                    button.close(type='button', data-dismiss='modal', aria-label='Close')
+                        i.icon_close
+                    .modal-body         
+                        h4.heading--5 Please enter 4 digit code
+                        form(action="")
+                            .form-style.form-style--2
+                                .form-group
+                                    .input-group
+                                        .input-group-prepend
+                                            .row
+                                                .col-3
+                                                    input.form-control(type='text',placeholder='')
+                                                .col-3
+                                                    input.form-control(type='text',placeholder='')
+                                                .col-3
+                                                    input.form-control(type='text',placeholder='')
+                                                .col-3
+                                                    input.form-control(type='text',placeholder='')
+                                        button.btn-sb.btn-sb--1(data-toggle="modal" ,data-dismiss='modal',  data-target="#inforModal")
+                                            i.fa.fa-long-arrow-right
+                            .btn-group-change
+                                .row
+                                    .col-6
+                                        a(data-toggle="modal" ,data-dismiss='modal',  data-target="#signUpModal") Change Mobile
+                                    .col-6
+                                        a(href="#") Resend Pin
+                        
+        //information
+        #inforModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true').infoForm
+            .modal-dialog(role='document')
+                .modal-header
+                        button.close(type='button', data-dismiss='modal', aria-label='Close')
+                            i.icon_close
+                        h4.heading--5 Please enter the information
+                        h4.heading--6 I am
+                .modal-content
+                    .modal-body 
+                        ul(class="nav nav-tabs nav-modal" id="myTab" role="tablist")
+                            li.nav-item
+                                a(class="nav-link active" id="form-tab-2" data-toggle="tab" href="#formTab-2" role="tab" aria-controls="home" aria-selected="false") Home owner
+                            li.nav-item
+                                a(class="nav-link" id="form-tab-3" data-toggle="tab" href="#formTab-3" role="tab" aria-controls="home" aria-selected="false") Home seeker
+                            li.nav-item
+                                a(class="nav-link" id="form-tab-4" data-toggle="tab" href="#formTab-4" role="tab" aria-controls="home" aria-selected="false") Property agent
+                        div(class="tab-content" id="myTabContent")
+                            div(class="tab-pane fade show active" id="formTab-2" role="tabpanel" aria-labelledby="form-tab-2")
+                                .form-style
+                                    .form-group
+                                        label EMAIL
+                                        .form-group-ipt
+                                            i.ic-email
+                                            input(type="text" placeholder="Your email").form-control.form-control-bg
+                                    .form-group
+                                        .row
+                                            .col-sm-6
+                                                label FIRST NAME
+                                                .form-group-ipt
+                                                    i.ic-user
+                                                    input(type="text" placeholder="First name").form-control.form-control-bg
+                                            .col-sm-6
+                                                label LAST NAME
+                                                .form-group-ipt
+                                                    i.ic-user
+                                                    input(type="text" placeholder="Last name").form-control.form-control-bg
+                                    .form-group
+                                        label password
+                                        .form-group-ipt
+                                            i.ic-pass
+                                            input(type="text" placeholder="Your password").form-control.form-control-bg
+                                    .form-group
+                                        label retype password
+                                        .form-group-ipt
+                                            i.ic-pass
+                                            input(type="text" placeholder="Retype your password").form-control.form-control-bg
+                                    .form-group
+                                        label CEA code
+                                        .form-group-ipt
+                                            i.ic-code
+                                            input(type="text" placeholder="CEA code").form-control.form-control-bg
+                                    .form-group
+                                        label Handphone register with CEA
+                                        .form-group-ipt
+                                            i.ic-phone
+                                            input(type="text" placeholder="(+64) 123 4567").form-control.form-control-bg
+                                    .form-group
+                                        label Agency
+                                        .form-group-ipt
+                                            i.ic-agency
+                                            input(type="text" placeholder="Name").form-control.form-control-bg
+                                    .form-group
+                                        button(type="submit").btn-sign
+                                            span Sign up free
+                                        .note-text Free Account
+
+                            div(class="tab-pane fade" id="formTab-3" role="tabpanel" aria-labelledby="form-tab-3")
+                                .form-style
+                                    .form-group
+                                        label EMAIL
+                                        .form-group-ipt
+                                            i.ic-email
+                                            input(type="text" placeholder="Your email").form-control.form-control-bg
+                                    .form-group
+                                        .row
+                                            .col-sm-6
+                                                label FIRST NAME
+                                                .form-group-ipt
+                                                    i.ic-user
+                                                    input(type="text" placeholder="First name").form-control.form-control-bg
+                                            .col-sm-6
+                                                label LAST NAME
+                                                .form-group-ipt
+                                                    i.ic-user
+                                                    input(type="text" placeholder="Last name").form-control.form-control-bg
+                                    .form-group
+                                        label password
+                                        .form-group-ipt
+                                            i.ic-pass
+                                            input(type="text" placeholder="Your password").form-control.form-control-bg
+                                    .form-group
+                                        label retype password
+                                        .form-group-ipt
+                                            i.ic-pass
+                                            input(type="text" placeholder="Retype your password").form-control.form-control-bg
+                                    .form-group
+                                        label CEA code
+                                        .form-group-ipt
+                                            i.ic-code
+                                            input(type="text" placeholder="CEA code").form-control.form-control-bg
+                                    .form-group
+                                        label Handphone register with CEA
+                                        .form-group-ipt
+                                            i.ic-phone
+                                            input(type="text" placeholder="(+64) 123 4567").form-control.form-control-bg
+                                    .form-group
+                                        label Agency
+                                        .form-group-ipt
+                                            i.ic-agency
+                                            input(type="text" placeholder="Name").form-control.form-control-bg
+                                    .form-group
+                                        button(type="submit").btn-sign
+                                            span Sign up free
+                                        .note-text Free Account
+                            div(class="tab-pane fade" id="formTab-4" role="tabpanel" aria-labelledby="form-tab-4")
+                                .form-style
+                                    .form-group
+                                        label EMAIL
+                                        .form-group-ipt
+                                            i.ic-email
+                                            input(type="text" placeholder="Your email").form-control.form-control-bg
+                                    .form-group
+                                        .row
+                                            .col-sm-6
+                                                label FIRST NAME
+                                                .form-group-ipt
+                                                    i.ic-user
+                                                    input(type="text" placeholder="First name").form-control.form-control-bg
+                                            .col-sm-6
+                                                label LAST NAME
+                                                .form-group-ipt
+                                                    i.ic-user
+                                                    input(type="text" placeholder="Last name").form-control.form-control-bg
+                                    .form-group
+                                        label password
+                                        .form-group-ipt
+                                            i.ic-pass
+                                            input(type="text" placeholder="Your password").form-control.form-control-bg
+                                    .form-group
+                                        label retype password
+                                        .form-group-ipt
+                                            i.ic-pass
+                                            input(type="text" placeholder="Retype your password").form-control.form-control-bg
+                                    .form-group
+                                        label CEA code
+                                        .form-group-ipt
+                                            i.ic-code
+                                            input(type="text" placeholder="CEA code").form-control.form-control-bg
+                                    .form-group
+                                        label Handphone register with CEA
+                                        .form-group-ipt
+                                            i.ic-phone
+                                            input(type="text" placeholder="(+64) 123 4567").form-control.form-control-bg
+                                    .form-group
+                                        label Agency
+                                        .form-group-ipt
+                                            i.ic-agency
+                                            input(type="text" placeholder="Name").form-control.form-control-bg
+                                    .form-group
+                                        button(type="submit").btn-sign
+                                            span Sign up free
+                                        .note-text Free Account
+
+
+
+                             
+                        

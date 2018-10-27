@@ -1,0 +1,54 @@
+extends ../layouts/_layout_default-1
+
+block title 
+    title House To Home | Buy List
+
+block content
+    section
+        .container
+            .row.justify-content-center
+                .col-lg-8
+                    +qc('/assets/images/buy/qc1.png', 'image', "#")
+    section.breadcrumbWrapper
+        .container
+            ol.breadcrumb
+                li.breadcrumb-item
+                    a(href='#') 
+                        span
+                        |   Home
+                li.breadcrumb-item.active(aria-current='page')  Find Property
+    section.search.listHouse
+        .container
+            .row.align-items-center
+                include ../modules/_search-section-1
+    section.list
+        .container
+            .list__wrapper
+                .row.justify-content-center
+                    .col-lg-12
+                        .list__top.clearfix
+                            .list__top__result
+                                span.quanlity   99
+                                span    Results Of
+                                span.catology   Property For Sale!
+                            .list__top__show
+                                .form-group#show
+                                    select.form-control()
+                                        option( value="all")  Showing 10 products
+                                        option(value="canada")  1
+                                        option(value="usa")  2
+                                        option(value="hongkong")  3
+                                        option(value="korea")  4
+                        +itemHouse('/assets/images/buy/house1.png','list__item__image',"/pages/buy-detail.html", 'HDB-DRAGONE', '130 Clarence lane', '104sqm ($7586 psm)', '3', '2', '104 spm', '$789,000', 'Nathan James') 
+                        +itemHouse('/assets/images/buy/house2.png','list__item__image',"/pages/buy-detail.html", 'HDB-DRAGONE', '130 Clarence lane', '104sqm ($7586 psm)', '3', '2', '104 spm', '$789,000', 'Jessicca') 
+                        +itemHouse('/assets/images/buy/house3.png','list__item__image',"/pages/buy-detail.html", 'HDB-DRAGONE', '130 Clarence lane', '104sqm ($7586 psm)', '3', '2', '104 spm', '$789,000', 'Jessicca') 
+                        .col-lg-10
+                            +qc('/assets/images/buy/qc2.png', 'image', "#")
+                        +itemHouse('/assets/images/buy/house4.png','list__item__image',"/pages/buy-detail.html", 'HDB-DRAGONE', '130 Clarence lane', '104sqm ($7586 psm)', '3', '2', '104 spm', '$789,000', 'Jessicca') 
+                        +itemHouse('/assets/images/buy/house5.png','list__item__image',"/pages/buy-detail.html", 'HDB-DRAGONE', '130 Clarence lane', '104sqm ($7586 psm)', '3', '2', '104 spm', '$789,000', 'Jessicca') 
+                        +itemHouse('/assets/images/buy/house6.png','list__item__image',"/pages/buy-detail.html", 'HDB-DRAGONE', '130 Clarence lane', '104sqm ($7586 psm)', '3', '2', '104 spm', '$789,000', 'Jessicca') 
+                        +itemHouse('/assets/images/buy/house7.png','list__item__image',"/pages/buy-detail.html", 'HDB-DRAGONE', '130 Clarence lane', '104sqm ($7586 psm)', '3', '2', '104 spm', '$789,000', 'Jessicca') 
+                        +itemHouse('/assets/images/buy/house8.png','list__item__image',"/pages/buy-detail.html", 'HDB-DRAGONE', '130 Clarence lane', '104sqm ($7586 psm)', '3', '2', '104 spm', '$789,000', 'Jessicca') 
+                        +itemHouse('/assets/images/buy/house9.png','list__item__image',"/pages/buy-detail.html", 'HDB-DRAGONE', '130 Clarence lane', '104sqm ($7586 psm)', '3', '2', '104 spm', '$789,000', 'Jessicca') 
+                        +itemHouse('/assets/images/buy/house10.png','list__item__image',"/pages/buy-detail.html", 'HDB-DRAGONE', '130 Clarence lane', '104sqm ($7586 psm)', '3', '2', '104 spm', '$789,000', 'Jessicca') 
+                        include ../modules/_paging

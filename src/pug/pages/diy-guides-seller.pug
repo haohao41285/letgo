@@ -1,0 +1,71 @@
+extends ../layouts/_layout_default-1
+block setting   
+    - var mainActive = 'seller'
+
+block title 
+    title House To Home | DIY Guides
+
+block content
+    section.breadcrumbWrapper
+        .container
+            ol.breadcrumb
+                li.breadcrumb-item
+                    a(href='/') Home
+                li.breadcrumb-item
+                    span DIY Guides
+                li.breadcrumb-item.active(aria-current='page')  Seller
+    
+    section.sellerSection
+        .container
+            .heading
+                h1
+                    span How it works - 
+                    span.red Seller's Guide
+            
+            .row.align-items-center
+                .col-12.col-md-6.col-lg-7.text-center.text-lg-right.order-md-last.mb-3.mb-md-0
+                    img(src= imgPath + "guides-seller/siggup-do-something.png", alt="")
+                .col-12.col-md-6.col-lg-5
+                    h2.heading--2
+                        i.heading__icon
+                            img(src= imgPath + "guides-seller/ic-register.svg", alt="")
+                        span.heading__content.
+                            SIGN UP & <br />
+                            DO SOMETHING
+                    p.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse
+    
+    section.sellerSection
+        .container
+            .row.align-items-center
+                .col-12.col-md-6.col-lg-7.text-center.text-lg-left.mb-3.mb-md-0
+                    img(src= imgPath + "guides-seller/list-your-house.png", alt="")
+
+                .col-12.col-md-6.col-lg-5
+                    h2.heading--2
+                        i.heading__icon
+                            img(src= imgPath + "guides-seller/ic-list-house.svg", alt="")
+                        span.heading__content.
+                            LIST YOUR HOUSE
+                    p.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse                
+    
+    section.sellerSection
+        .container            
+            .row.align-items-center
+                .col-12.col-md-6.col-lg-7.text-center.text-lg-right.order-md-last.mb-3.mb-md-0
+                    img(src= imgPath + "guides-seller/finish-complete.png", alt="")
+
+                .col-12.col-md-6.col-lg-5
+                    h2.heading--2
+                        i.heading__icon
+                            img(src= imgPath + "guides-seller/ic-finish-complete.svg", alt="")
+                        span.heading__content.
+                            FINISH & COMPLETE
+                    p.
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                        Duis aute irure dolor in reprehenderit in voluptate velit esse
+
+                

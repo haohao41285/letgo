@@ -1,0 +1,64 @@
+extends ../layouts/_layout_default-2
+
+block title 
+    title House To Home | My Profile
+
+block content
+    section.breadcrumbWrapper
+        .container
+            ol.breadcrumb
+                li.breadcrumb-item
+                    a(href='/') Home
+                li.breadcrumb-item.active(aria-current='page')  Post your house
+    
+    section.myProfile.postHouse
+        .container
+            .heading
+                h1
+                    span Post your house
+            .step
+                ul.clearfix
+                    li.processing
+                        span    1
+                    li.processing.active
+                        span    2
+                    li
+                        span    3
+            form.myProfileForm
+                .row.justify-content-center
+                    .col-12.col-sm-10.col-md-8.col-lg-6
+                        h2.heading--2
+                            span    Step 2 of 3
+                            p     Great! Now tell us more about your house! 
+
+                        .form-group
+                            label(for="size") price
+                            select#price.form-control.selectui(name="price")
+                                option(value="") Select
+                                option(value="1") Option 1
+                                option(value="2") Option 2
+                         
+                        .row
+                            .col-12.col-md-6
+                                .form-group
+                                    label(for="ofBath") Number of bath
+                                    i.icon_plus_alt2
+                                    input#ofBath.form-control(type="text" name="ofBath" value="1" placeholder="" class="numberOfBath")
+                                    i.icon_minus_alt2
+
+                            .col-12.col-md-6
+                                .form-group
+                                    label(for="ofRooom") number of rooms
+                                    i.icon_plus_alt2
+                                    input#ofRooom.form-control(type="text" name="ofRooom" value="1" placeholder='' class="numberOfBath")
+                                    i.icon_minus_alt2
+
+                        .form-group
+                            label(for="size") Size (sqm)
+                            input#size.form-control(type="text" name="size" value="" placeholder='Enter size')
+
+                        .form-group
+                            label(for='exampleFormControlTextarea1') Description
+                            textarea#exampleFormControlTextarea1.form-control(rows='5', placeholder='Enter description')
+                        .form-btn.text-center
+                            button.btn.btn-danger.blue(type="submit") next step

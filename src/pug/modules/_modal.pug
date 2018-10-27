@@ -1,0 +1,37 @@
+// Modal
+#exampleModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='exampleModalLabel', aria-hidden='true')
+    .modal-dialog(role='document')
+        .modal-content
+            .modal-header
+                h5#exampleModalLabel.modal-title 
+                    span    
+                    span   nhận tin tức mới từ kornova
+                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    span(aria-hidden='true') ×
+            .modal-body
+                form
+                    .form-group
+                        label(for='exampleInputEmail1') 
+                            i.icon_profile
+                            |   Họ và tên
+                        input#exampleInputEmail1.form-control(type='text', placeholder='')
+                    .form-group
+                        label(for='exampleInputPassword1') 
+                            i.icon_mail
+                            |   Email
+                        input#exampleInputPassword1.form-control(type='email', placeholder='')
+                    button.readmore(type='submit') 
+                        i.arrow_right_alt
+                        |   Gửi
+
+#registerModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='registerModalLabel', aria-hidden='true')
+    .modal-dialog(role='document')
+        .modal-content
+            .modal-header
+                button.close(type='button', data-dismiss='modal', aria-label='Close')
+                    span(aria-hidden='true') ×
+            .modal-body
+                p   KORNOVA CẢM ƠN ANH/CHỊ ĐÃ GỬI YÊU CẦU NHẬN ĐÁNH GIÁ HỒ SƠ TRỰC TUYẾN
+                p   Chuyên viên tư vấn Kornova sẽ liên hệ lại với anh chị thông báo kết quả đánh giá hồ sơ và tiến hành chu trình tư vấn chi tiết cùng Anh/Chị
+                    
+        

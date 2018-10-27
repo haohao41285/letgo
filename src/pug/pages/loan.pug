@@ -1,0 +1,50 @@
+extends ../layouts/_layout_default-1
+
+block title 
+    title House To Home | Loan
+
+block content
+    .mainWrapper
+        section.breadcrumbWrapper
+            .container
+                ol.breadcrumb
+                    li.breadcrumb-item
+                        a(href='#') 
+                            span
+                            |   Home
+                    li.breadcrumb-item.active(aria-current='page')  Loan
+        section
+            .container
+                .heading
+                    h1  
+                        span    get the best
+                        span.red    home loans
+                        span    today!
+        section.mainLoan
+            .container
+                .mainLoan__inner
+                    .row    
+                        .mainLoan__inner__wrapper
+                            .mainLoan__inner__item
+                                .body
+                                    .icon
+                                        span
+                                    .text
+                                        p   Ask our professional representative
+                            .mainLoan__inner__item
+                                .content
+                                    .content__head
+                                        i.fa.fa-phone
+                                        span    phone
+                                    .content__body
+                                        p   (+65) 091.234.567
+                            .mainLoan__inner__item
+                                .content
+                                    .content__head
+                                        i.fa.fa-envelope
+                                        span    email
+                                    .content__body
+                                        p   housetohome@gmail.com 
+                    .row
+                        include ../modules/_contact-form
+                                

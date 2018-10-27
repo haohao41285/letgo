@@ -1,0 +1,237 @@
+.contact {
+    background-color: $white;
+    box-shadow: 0px 0px 13px 0px rgba(0, 0, 0, 0.09);
+    width: 100%;
+    padding: rem(38) rem(62);
+    &.contactPage {
+        margin-top: -25px;
+        .title {
+            margin-bottom: rem(15);
+            h3 {
+                text-align: left;
+            }
+        }
+    }
+    .title {
+        h3 {
+            text-align: center;
+            font-size: rem(24);
+            text-transform: uppercase;
+            font-weight: 700;
+            color: $color-body;
+            letter-spacing: (100/1000)*1em;
+        }
+    }
+    .form {
+        .form-group {
+            label {
+                font-size: rem(11);
+                text-transform: uppercase;
+                letter-spacing: (100/1000)*1em;
+                color: $color-body;
+                font-weight: 700;
+                span {
+                    color: $color-hover;
+                }
+            }
+            .form-control {
+                background-color: #f4f4f4;
+                border: 1px solid transparent;
+                min-height: 45px;
+                padding-left: rem(15);
+            }
+            .btn-group {
+                padding-left: 0;
+                button {
+                    background-color: transparent;
+                    border-color: transparent;
+                }
+            }
+            textarea {
+                margin-bottom: rem(30);
+            }
+        }
+        .form-row {
+            margin-bottom: 1rem;
+        }
+        .sendForm {
+            text-align: center;
+            &.btnContact {
+                float: right;
+                a {
+                    min-width: 235px;
+                    margin-top: rem(15);
+                    color: $white;
+                    cursor: pointer;
+                }
+            }
+            a {
+                min-width: 300px;
+            }
+        }
+    }
+}
+
+.mainContact {
+    margin-bottom: 85px;
+    margin-top: 90px;
+    .contact-information {
+        background-color: #d9e5ea;
+        margin-right: -30px;
+        padding-left: rem(25);
+        padding-top: rem(35);
+        .mainLoan {
+            &__inner {
+                &__item {
+                    padding-bottom: rem(60);
+                    .body {
+                        .text {
+                            margin-left: rem(15);
+                        }
+                    }
+                }
+            }
+        }
+        &__item {
+            padding-left: rem(30);
+            padding-bottom: rem(60);
+            .head {
+                span {
+                    text-transform: uppercase;
+                    font-size: rem(18);
+                    font-weight: 700;
+                    letter-spacing: (100/1000)*1em;
+                    color: $color-body;
+                }
+                i {
+                    color: $white;
+                    background-color: #72d0f4;
+                    border-radius: 50%;
+                    padding: rem(7) rem(8);
+                    &.fa-map-marker {
+                        padding: rem(7) rem(10);
+                    }
+                }
+            }
+            .body {
+                padding-left: rem(35);
+                p {
+                    font-size: rem(18);
+                    color: $color-body;
+                    letter-spacing: (50/1000)*1em;
+                    line-height: (30/18);
+                    margin-bottom: 0;
+                    &.title {
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.maps {
+    padding-bottom: 105px;
+}
+@media only screen and (max-width: 1199px) and (min-width: 992px) {
+    .mainContact {
+        .contact-information {
+            padding-left: 0;
+            .mainLoan {
+                &__inner {
+                    &__item {
+                        .body {
+                            .text {
+                                margin-left: rem(5);
+                                p {
+                                    font-size: rem(20);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .contact {
+        &.contactPage {
+            padding-bottom: rem(5);
+        }
+        .form {
+           .imageRobot {
+               img {
+                   width: 90%;
+               }
+           }
+           .sendForm {
+                &.btnContact {
+                    a {
+                        margin-top: 0;
+                    }
+                }
+           }
+        }  
+    }
+}
+
+@media(max-width: 991px) {
+    .mainContact {
+        margin-top: rem(30);
+        .contact-information {
+            margin-right: 0;
+            .mainLoan {
+                &__inner {
+                    &__item {
+                        padding-bottom: rem(30);
+                    }
+                }
+            }
+            &__item {
+                padding-bottom: rem(30);
+            }
+        }
+    }
+}
+
+@media(max-width: 767px) {
+    .contact {
+        padding: rem(38) rem(10);
+        .form {
+            .imageRobot {
+                text-align: center;
+            }
+            .sendForm {
+                &.btnContact {
+                    float: none;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 479px) {
+    .mainContact {
+        .contact-information {
+            &__item {
+                padding-left: 0;
+            }
+        }
+    } 
+}
+
+@media(max-width: 375px) {
+    .contact {
+        .form {
+            .sendForm {
+                a {
+                    min-width: 250px;
+                }
+            }
+            .imageRobot {
+                img {
+                    width: 90%;
+                }
+            }
+        }
+    }
+}

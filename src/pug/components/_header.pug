@@ -1,0 +1,27 @@
+header
+    .container
+        .header
+            .row.align-items-center
+                .col-lg-4
+                    a.logo(href="/index.html")
+                        img(src="/images/logo.svg", alt="Logo")
+                    a(href="#" class="header__toggle")
+                        span
+                        span
+                        span
+                        span
+                .col-lg-4
+                    .wrapMenu
+                        .menuMain
+                            +menuNav(mainActive,slideMenu, '', '', 'nav-menu', '' ,'nav-item', 'nav-link')
+                .col-lg-4
+                    .header__login
+                        .signInOut
+                            a(href="#" data-toggle="modal" data-target="#loginModal")
+                                |   Sign in
+                            a(href="#" data-toggle="modal" data-target="#signUpModal")
+                                |   Sign up
+                        a(href="#" class="goToList")
+                            i.icon_plus_alt
+                            span   List your house
+// End Header

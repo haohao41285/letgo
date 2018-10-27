@@ -1,0 +1,87 @@
+extends ../layouts/_layout_default-1
+
+block title 
+    title House To Home | About Us
+
+block content
+    section.breadcrumbWrapper
+        .container
+            ol.breadcrumb
+                li.breadcrumb-item
+                    a(href='#') 
+                        span
+                        |   Home
+                li.breadcrumb-item.active(aria-current='page')  About us
+    section
+        .container
+            .heading
+                h1
+                    span    About
+                    span.red    us
+    section.aboutUs-top
+        .aboutUs-top__content
+            .aboutUs-top__content__item
+                +bgImg(imgDataPath + 'aboutus/img1.png', 'image', "image 1")
+            .aboutUs-top__content__item
+                .title
+                    h3  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui 
+                .content
+                    p   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                    p   s aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusan
+    section.aboutUs-services
+        .container
+            .heading
+                h3
+                    |   OUR SERVICES
+        .container
+            .row
+                .col-lg-4
+                    .aboutUs-services__item
+                        .icon
+                            span(style="background-image: url(/images/search.svg);")
+                        .text
+                            h3  Property Search Platforms  
+                .col-lg-4
+                    .aboutUs-services__item
+                        .icon
+                            span(style="background-image: url(/images/solution.svg);")
+                        .text
+                            h3  home loans solution  
+                .col-lg-4
+                    .aboutUs-services__item
+                        .icon
+                            span(style="background-image: url(/images/guides.svg);")
+                        .text
+                            h3  DIY Guides
+    section.aboutUs-sell
+        .container
+            .aboutUs-sell__wrapper
+                .content
+                    h3  BUY.SELL.RENT
+                    p   Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    img(src=imgDataPath + 'aboutus/img4.png', alt="")
+    section.aboutUs-bottom
+        .container
+            .row
+                .col-lg-6
+                    .aboutUs-bottom__item
+                        .text
+                            p   Lorem ipsum dolor sit amet consectetur ?
+                            p   Sed do eiusmod tempor incididunt ut labore
+                .col-lg-6
+                    .aboutUs-bottom__item
+                        .content
+                            .content__item 
+                                .content__item__head
+                                    i.fa.fa-phone
+                                    span    phone
+                                .content__item__body
+                                    p   (+65) 091.234.567
+                            .content__item 
+                                .content__item__head
+                                    i.fa.fa-envelope
+                                    span    email
+                                .content__item__body
+                                    p   housetohome@gmail.com 
+
+                

@@ -1,0 +1,49 @@
+extends ../layouts/_layout_default-1
+
+block title 
+    title House To Home | News List
+
+block content
+    section.breadcrumbWrapper
+        .container
+            ol.breadcrumb
+                li.breadcrumb-item
+                    a(href='#') 
+                        span
+                        |   Home
+                li.breadcrumb-item.active(aria-current='page')   News
+    section.newsMain
+        .container
+            .search 
+                .newsSearch
+                    include ../modules/_search-section-2
+            .gridNews
+                .row
+                    .col-md-4.col-6.break480
+                        +itemNew(imgDataPath + 'news/img01.jpg','image','/pages/news-detail.html')
+                    .col-md-4.col-6.break480
+                        +itemNew(imgDataPath + 'news/img02.jpg','image','/pages/news-detail.html')
+                    .col-md-4.col-6.break480
+                        +itemNew(imgDataPath + 'news/img03.jpg','image','/pages/news-detail.html')
+                    .col-md-4.col-6.break480
+                        +itemNew(imgDataPath + 'news/img04.jpg','image','/pages/news-detail.html')
+                    .col-md-4.col-6.break480
+                        +itemNew(imgDataPath + 'news/img05.jpg','image','/pages/news-detail.html')
+                    .col-md-4.col-6.break480
+                        +itemNew(imgDataPath + 'news/img06.jpg','image','/pages/news-detail.html')
+                    .col-md-4.col-6.break480
+                        +itemNew(imgDataPath + 'news/img07.jpg','image','/pages/news-detail.html')
+                    .col-md-4.col-6.break480
+                        +itemNew(imgDataPath + 'news/img08.jpg','image','/pages/news-detail.html')
+                    .col-md-4.col-6.break480
+                        +itemNew(imgDataPath + 'news/img09.jpg','image','/pages/news-detail.html')
+                    .col-md-4.col-6.break480
+                        +itemNew(imgDataPath + 'news/img10.jpg','image','/pages/news-detail.html')
+                    .col-md-4.col-6.break480
+                        +itemNew(imgDataPath + 'news/img11.jpg','image','/pages/news-detail.html')
+                    .col-md-4.col-6.break480
+                        +itemNew(imgDataPath + 'news/img12.jpg','image','/pages/news-detail.html')
+            include ../modules/_paging   
+
+
+

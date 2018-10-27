@@ -1,0 +1,200 @@
+.wrapMenu {
+    display: inline-block;
+    .menuMain {
+        display: inline-block;
+        position: relative;
+        z-index: 10;
+        text-transform: uppercase;
+        margin: 0 -15px;
+        @include media-breakpoint-down('md') {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            display: none;
+            padding: 0;
+        }
+    }
+    .nav-menu {
+        padding: 0;
+        margin: 0;
+        @include clearfix();
+        .nav-item {
+            list-style: none;
+            display: inline-block;
+            position: relative;
+            text-transform: uppercase;
+            border: 1px solid transparent;
+            &:hover {
+                .nav-link {
+                    color: $white;
+                    background-color:$color-hover;
+                }
+            }
+            .nav-link {
+                font-size: rem(16);
+                color: $color-body;
+                position: relative;
+                font-weight: 600;
+                @include transition();
+                letter-spacing: (75/1000)*1em;
+                padding: rem(27) rem(17);
+                display: block;
+                border-radius:2px;
+                >span {
+                    position: relative;
+                    z-index: 2;
+                }
+            }
+            &.hasChild {
+                @include transition();
+                >ul {
+                    background: $white;
+                    margin: 0;
+                    padding: 0;
+                    list-style: none;
+                    text-align: left;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    opacity: 0;
+                    // z-index: ;
+                    visibility: hidden;
+                    min-width: 170px;
+                    box-shadow: 0 0 rem(13) rgba($black, 0.09);
+                    @include transition();
+                    @include media-breakpoint-down(md) {}
+                    >li {
+                        position: relative;
+                        border-top: 1px solid #ebebeb;
+                        &:first-child {
+                            border-top: none;
+                        }
+                        > a,
+                        > span {
+                            color: $color-body;
+                            text-decoration: none;
+                            text-align: center;
+                            display: block;
+                            padding: rem(14) rem(25);
+                            font-weight: 600;
+                            letter-spacing: 0.1em;
+                            text-transform: uppercase;
+                            text-align: left;
+                            @include transition();
+                            >span {
+                                position: relative;
+                                z-index: 2;
+                            }
+                            &:hover {
+                                color: $color-hover;
+                            }
+                        }
+
+                        &.active {
+                            > a,
+                            > span {
+                                color: $color-hover;
+                                background: #e3e3e3;
+                            }
+                        }
+                    }
+                }
+                &:hover {
+                    >ul {
+                        opacity: 1;
+                        z-index: 99;
+                        visibility: visible;
+                    }
+                }
+            }
+            &.active {
+                > .nav-link {
+                    color: $white;
+                    background-color:$color-hover;
+                    &:after {
+                        width: 100%;
+                        @include transition();
+                    }
+                }
+            }
+        }
+        .expand {
+            display: none;
+            display: none;
+            position: absolute;
+            height: 3.36rem;
+            font-size: 1.6rem;
+            line-height: 2.1;
+            width: 40px;
+            text-align: center;
+            left: 50%;
+            top: -2px;
+            -webkit-transition: all 0.2s ease-in-out;
+            transition: all 0.2s ease-in-out;
+            cursor: pointer;
+            &.active {
+                i:before {
+                    content: "\4b";
+                }
+            }
+            @include media-breakpoint-down(md) {
+                display: block;
+                left: auto;
+                right: 0
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .menuMain {
+        margin: 0 !important;
+        display: none;
+    }
+    .menuMain {
+        .nav-menu {
+            background: #fff;
+            margin-top: rem(-10);
+            li.nav-item {
+                display: block;
+                padding: 0;
+                float: none;
+                text-align: left;
+                border-bottom: 1px solid #eaeaef;
+                .nav-link {
+                    padding: rem(15) rem(17);
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 1199px) and (min-width: 992px) {
+    .wrapMenu {
+        .nav-menu {
+            .nav-item {
+                .nav-link {
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 1199px) {  
+    .wrapMenu {
+        .nav-menu {
+            .nav-item {
+                padding: rem(27) rem(10);
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    header {
+        .navbar-collapse {
+            display: flex !important;
+            flex-basis: auto;
+        }
+    }
+}

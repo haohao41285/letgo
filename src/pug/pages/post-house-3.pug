@@ -1,0 +1,73 @@
+extends ../layouts/_layout_default-2
+
+block title 
+    title House To Home | My Profile
+
+block content
+    section.breadcrumbWrapper
+        .container
+            ol.breadcrumb
+                li.breadcrumb-item
+                    a(href='/') Home
+                li.breadcrumb-item.active(aria-current='page')  Post your house
+    
+    section.myProfile.postHouse
+        .container
+            .heading
+                h1
+                    span Post your house
+            .step
+                ul.clearfix
+                    li.processing
+                        span    1
+                    li.processing
+                        span    2
+                    li.processing.active
+                        span    3
+            form.myProfileForm
+                .row.justify-content-center
+                    .col-12.col-sm-10.col-md-8.col-lg-6
+                        h2.heading--2
+                            span    Step 3 of 3
+                            p     Great! Let's upload some photos of your house!
+                        .image-upload
+                            .row
+                                .col-lg-4.col-md-4.col-sm-12
+                                    .image-upload__item
+                                        +bgImg(imgDataPath+'posthouse/img1.png',"images","Hình 1")
+                                        .choose-item
+                                            .form-check
+                                                input#exampleRadios1.form-check-input(type='radio', name='exampleRadios', value='option1', checked='')
+                                                label.form-check-label(for='exampleRadios1')
+                                                    | Cover photo
+                                        .btn-del
+                                            i.icon_close_alt
+                                .col-lg-4.col-md-4.col-sm-12
+                                    .image-upload__item
+                                        +bgImg(imgDataPath+'posthouse/img2.png',"images","Hình 2")
+                                        .choose-item
+                                            .form-check
+                                                input#exampleRadios2.form-check-input(type='radio', name='exampleRadios', value='option2')
+                                                label.form-check-label(for='exampleRadios2')
+                                                    | Cover photo
+                                        .btn-del
+                                            i.icon_close_alt
+                                .col-lg-4.col-md-4.col-sm-12
+                                    .image-upload__item
+                                        +bgImg(imgDataPath+'posthouse/img3.png',"images","Hình 3")
+                                        .choose-item
+                                            .form-check
+                                                input#exampleRadios3.form-check-input(type='radio', name='exampleRadios', value='option3')
+                                                label.form-check-label(for='exampleRadios3')
+                                                    | Cover photo
+                                        .btn-del
+                                            i.icon_close_alt
+                                .col-lg-4.col-md-4.col-sm-12
+                                    .houseItem.houseItem--add.upload
+                                        .houseItem__body
+                                            .houseItem__add
+                                                .custom-file
+                                                    input#customFile.custom-file-input(type='file')
+                                                    label(for='customFile') Upload Photos
+                        .form-btn.text-center
+                            button.btn.btn-danger.blue(type="submit") finish

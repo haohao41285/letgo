@@ -1,0 +1,165 @@
+.mainLoan {
+    &__inner {
+        max-width: 980px;
+        margin: 0 auto;
+        margin-top: rem(75);
+        padding-bottom: rem(120);
+        .row {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        &__wrapper {
+            display: table;
+            width: 100%;
+            margin-bottom: rem(52);
+        }
+        &__item {
+            display: table-cell;
+            min-width: 300px;
+            padding: 0 10px;
+            &:first-child {
+                min-width: 380px;
+            }
+            &:last-child {
+                .content {
+                    margin-right: -10px;
+                }
+            }
+            .content {
+                background-color: $white;
+                box-shadow: -1px 6px 18px 0px rgba(0, 0, 0, 0.1);
+                padding: rem(25) rem(0) rem(25) rem(25);
+                &__head {
+                    span {
+                        text-transform: uppercase;
+                        font-size: rem(18);
+                        font-weight: 700;
+                        letter-spacing: (100/1000)*1em;
+                        color: $color-body;
+                    }
+                    i {
+                        color: $white;
+                        background-color: #72d0f4;
+                        border-radius: 50%;
+                        padding: rem(7) rem(8);
+                    }
+                }
+                &__body {
+                    p {
+                        font-size: rem(18);
+                        letter-spacing: (50/1000)*1em;
+                        color: $color-body;
+                        padding-left: rem(38);
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            .body {
+                .icon {
+                    display: inline-block;
+                    vertical-align: middle;
+                    span {
+                        display: inline-block;
+                        width: rem(53);
+                        height: rem(53);
+                        background-image: url($image-path + 'ask.svg');
+                        background-repeat: no-repeat;
+                    }
+                }
+                .text {
+                    display: inline-block;
+                    vertical-align: middle;
+                    margin-left: rem(30);
+                    width: 75%;
+                    position: relative;
+                    &::before {
+                        position: absolute;
+                        content: '';
+                        bottom: 0;
+                        left: 0;
+                        width: rem(240);
+                        height: rem(1);
+                        background-color: $colour-gray-4;
+                    }
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        bottom: 0;
+                        left: 0;
+                        width: rem(90);
+                        height: rem(1);
+                        background-color: $color-hover;
+                    }
+                    p {
+                        margin-bottom: 0;
+                        text-transform: uppercase;
+                        font-weight: 700;
+                        font-size: rem(24);
+                        letter-spacing: (70/1000)*1em;
+                        color: $color-body;
+                        padding-bottom: rem(25);
+                    }
+                }
+                &.contact-us {
+                    .icon {
+                        span {
+                            background-image: url($image-path + 'mail.svg');
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 1024px) {
+    .mainLoan {
+        &__inner {
+            &__item {
+                min-width: 260px;
+                margin-bottom: 10px;
+                &:first-child {
+                    min-width: 340px;
+                }
+                &:last-child {
+                    .content {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 991px) {
+    .mainLoan {
+        &__inner {
+            &__wrapper {
+                display: block;
+            }
+            &__item {
+                display: block;
+                min-width: unset;
+                &:first-child {
+                    min-width: unset;
+                }
+            }
+        }
+    } 
+}
+
+@media(max-width: 479px) {
+    .mainLoan {
+        &__inner {
+            &__item {
+                .body {
+                    .text {
+                        &::before {
+                            width: rem(190);
+                        }
+                    }
+                }
+            }
+        }
+    } 
+}

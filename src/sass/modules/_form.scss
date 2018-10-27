@@ -1,0 +1,156 @@
+.form {
+  .form-row {
+      margin-bottom: 33px;
+      .form-group {
+          margin-bottom: 0;
+          position: relative;
+          i {
+            position: absolute;
+            top: 0;
+            left: rem(5);
+            width: rem(40);
+            bottom: 0;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 50%;
+          }
+          .form-control {
+              border-radius: 0;
+              padding-left: 40px;
+              min-height: 49px;
+          }
+          &.insertCode {
+              .form-control {
+                  width: 64%;
+                  float: left;
+                  padding-left: 15px;
+              }
+              .captcha {
+                  position: absolute;
+                  right: 34%;
+                  top: 50%;
+                  transform: translate(0, -50%);
+                  background-image: url('/images/pattern.png');
+                  background-position: center bottom;
+                  background-color: #dddfe1;
+                  img{
+                      max-width:100%;
+                  }
+                  i {
+                      right: -22px;
+                      left: unset;
+                      color: #5d5d5d;
+                      font-size: 14px;
+                  }
+              }
+              button {
+                  position: relative;
+                  float: right;
+                  width: 30%;
+                  box-shadow: 0 0 46px rgba(0,0,0,0.16);
+                  border-radius: 18px;
+                  color: $colour-gray-4;
+                  font-size: (14/16)*1em;
+                  font-weight: 700;
+                  line-height: (25/14);
+                  text-transform: uppercase;
+                  background-color: $white;
+                  &:hover {
+                      background-color: $colour-gray-4;
+                      color: $white;
+                      i {
+                          color: $white;
+                      }
+                  }
+              }
+          }
+      }
+  }
+}
+
+@media(max-width: 1199px) {
+    .form {
+        padding-bottom: 50px;
+        .form-row {
+            .form-group {
+                &.insertCode {
+                    .captcha {
+                        right: unset;
+                    }
+                    button {
+                        position: absolute;
+                        width: 100%;
+                        left: -100%;
+                        margin-top: 20px;
+                        top: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 991px) {
+    .footer {
+        &__bottom {
+            &__other {
+                ul {
+                    li {
+                        &:first-child {
+                            padding-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+        &__info {
+            padding-bottom: 20px;
+        }
+    }
+}
+
+@media(max-width: 767px) {
+    .form {
+        .form-row {
+            margin-bottom: 0;
+            .form-group {
+                margin-bottom: 10px;
+                &.insertCode {
+                    .captcha {
+                        right: unset;
+                    }
+                    button {
+                        position: relative;
+                        width: 30%;
+                        left: unset;
+                        top: unset;
+                        float: right;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 479px) {
+    .form {
+        .form-row {
+            .form-group {
+                &.insertCode {
+                    .captcha {
+                        position: inherit;
+                        right: 0;
+                        top: 10%;
+                        transform: translate(0, -25%);
+                        text-align: center;
+                    }
+                    button {
+                        float: none;
+                        width: 100%;
+                        margin-top: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

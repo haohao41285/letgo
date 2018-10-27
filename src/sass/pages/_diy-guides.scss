@@ -1,0 +1,84 @@
+.sellerSection {
+    padding: rem(52) 0 rem(48);
+
+    img {
+        max-width: 100%;
+    }
+
+    .breadcrumbWrapper + & {
+        padding-top: 0;
+
+        .heading {
+            margin-bottom: rem(50);
+            h1 {
+                margin: 0;
+            }
+        }
+    }
+
+    &:nth-child(3n) {
+        background: #f4f9fd;
+    }
+
+    p {
+        line-height: em(36, 16);
+        letter-spacing: 0.05em;
+        font-weight: 500;
+    }
+}
+
+.costSection {
+    .breadcrumbWrapper + & {
+        padding-top: 0;
+
+        .heading {
+            margin-bottom: rem(60);
+            h1 {
+                margin: 0;
+            }
+        }
+    }
+
+    .nav-tabs {
+        border-bottom: 1px solid #ebebeb;
+        padding-bottom: rem(15);
+
+        .nav-item {
+            border-radius: 5px;
+            border: none;
+            background: transparent;
+            margin: 0 7px;
+            font-size: rem(24);
+            font-weight: 700;
+            letter-spacing: 0.03em;
+            line-height: (30/24);
+            padding: em(10,24) em(27, 24);
+            color: #999;
+
+            &.active {
+                background: #fff;
+                box-shadow: 0 rem(5) rem(32) rgba($black, 0.1);
+                color: $danger;
+            }
+        }
+    }
+
+    .tab-content {
+        padding: 20px 0 70px;
+        line-height: (24/16);
+
+        h2 {
+            font-size: rem(30);
+            margin-bottom: em(55, 30);
+            font-weight: 600;
+            letter-spacing: 0.03em;
+
+            small {
+                display: block;
+                font-size: em(18, 30);
+                margin-top: em(8, 18);
+                font-weight: 400;
+            }
+        }
+    }
+}

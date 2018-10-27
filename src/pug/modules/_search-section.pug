@@ -1,0 +1,66 @@
+.col-lg-9.col-md-12
+    form(action="")
+        .form
+            .form-group#buy
+                select.form-control()
+                    option( value="all")  Buy
+                    option(value="canada")  1
+                    option(value="usa")  2
+                    option(value="hongkong")  3
+                    option(value="korea")  4
+            .form-group#residental
+                select.form-control()
+                    option( value="all")  Residental
+                    option(value="canada")  1
+                    option(value="usa")  2
+                    option(value="hongkong")  3
+                    option(value="korea")  4
+            .form-group
+                select.form-control.selectpicker.show-menu-arrow(multiple data-actions-box="true" title="Location")
+                    option(value="")  100 Phạm hùng, quận 8
+                    option(value="")  200 Sư vạn hạnh, quận 10
+                    option(value="")  300 Hùng Vương, quận 5
+                    option(value="")  400 Cao Thằng, quận 3
+            .form-group
+                .span2.investRange
+                    button#min-max-price-range.form-control.selectpicker.select-btn.dropdown-toggle.searchParams(href='#', data-toggle='dropdown', tabindex='6')
+                        .filter-option.span_price
+                            span#price_range1  
+                            |  - 
+                            span#price_range2 Any price
+                    .dropdown-menu.ddRange(role='menu', style='width: 295px;padding-top: 12px;')
+                        .rangemenu
+                            .freeformPrice
+                                .freeformPrice__item
+                                    input.min_input.form-control(name='min_price', type='text', placeholder='Min Price')
+                                .freeformPrice__item
+                                    input.max_input.form-control(name='max_price', type='text', placeholder='Max Price')
+                            .price_Ranges.rangesMax
+                                a.max_value(value='0', href='javascript:void(0)') Any Max
+                                a.max_value(value='1000000', href='javascript:void(0)') 1000000
+                                a.max_value(value='2500000', href='javascript:void(0)') 2500000
+                                a.max_value(value='5000000', href='javascript:void(0)') 5000000
+                                a.max_value(value='10000000', href='javascript:void(0)') 10000000
+                                a.max_value(value='50000000', href='javascript:void(0)') 50000000
+                                a.max_value(value='100000000', href='javascript:void(0)') 100000000
+                                a.max_value(value='500000000', href='javascript:void(0)') 500000000
+                                a.max_value(value='1000000000', href='javascript:void(0)') 1000000000
+                                a.max_value(value='2000000000', href='javascript:void(0)') 2000000000
+                                a.max_value(value='5000000000', href='javascript:void(0)') 5000000000
+                            .price_Ranges.rangesMin
+                                a.min_value(value='0', href='javascript:void(0)') Any Min
+                                a.min_value(value='1000000', href='javascript:void(0)') 1000000
+                                a.min_value(value='2500000', href='javascript:void(0)') 2500000
+                                a.min_value(value='5000000', href='javascript:void(0)') 5000000
+                                a.min_value(value='10000000', href='javascript:void(0)') 10000000
+                                a.min_value(value='50000000', href='javascript:void(0)') 50000000
+                                a.min_value(value='100000000', href='javascript:void(0)') 100000000
+                                a.min_value(value='500000000', href='javascript:void(0)') 500000000
+                                a.min_value(value='1000000000', href='javascript:void(0)') 1000000000
+                                a.min_value(value='2000000000', href='javascript:void(0)') 2000000000
+                                a.min_value(value='5000000000', href='javascript:void(0)') 5000000000
+                        .btnClear
+                            a.btn.btn-link(href='javascript:void(0)') Clear
+            .form-group
+                a(class="btnPrimary btnSearch")
+                    |   search

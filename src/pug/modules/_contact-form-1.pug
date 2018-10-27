@@ -1,0 +1,39 @@
+.contact.contactPage
+    .title
+        h3  Contact form
+    .form         
+        form(action="#")
+            .form-group
+                label(for='inputName') full name
+                    span    *
+                input#inputName.form-control(type='text', placeholder='Enter name')  
+            .form-row
+                .form-group.col-md-7
+                    label(for='inputPhone') Phone
+                        span    *
+                    input#inputPhone.form-control(type='text', placeholder='Enter phone')
+                .form-group.col-md-5
+                    label(for='inputMail') Email
+                        span    *
+                    input#inputMail.form-control(type='email', placeholder='Enter email')
+            .form-group#general
+                label(for='inputName') general
+                    span    *
+                select.form-control()
+                    option( value="all")  General Enquiry
+                    option(value="canada")  1
+                    option(value="usa")  2
+                    option(value="hongkong")  3
+                    option(value="korea")  4
+            .form-group
+                label(for='exampleFormControlTextarea1') Message
+                    span    *
+                textarea#exampleFormControlTextarea1.form-control(rows='3', placeholder='Your message')
+            .form-row
+                .form-group.col-md-6
+                    .imageRobot
+                        img(src=imgDataPath + 'home/robot.png', alt="")
+                .form-group.col-md-6
+                    .sendForm.btnContact
+                        a( class="btnPrimary")
+                            |   Send

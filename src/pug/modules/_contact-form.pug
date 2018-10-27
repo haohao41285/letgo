@@ -1,0 +1,25 @@
+.contact
+    .title
+        h3  Contact form
+    .form         
+        form(action="#")
+            .form-group
+                label(for='inputName') full name
+                    span    *
+                input#inputName.form-control(type='text', placeholder='Enter name')  
+            .form-row
+                .form-group.col-md-6
+                    label(for='inputPhone') Phone
+                        span    *
+                    input#inputPhone.form-control(type='text', placeholder='Enter phone')
+                .form-group.col-md-6
+                    label(for='inputMail') Email
+                        span    *
+                    input#inputMail.form-control(type='email', placeholder='Enter email')
+            .form-group
+                label(for='exampleFormControlTextarea1') Message
+                    span    *
+                textarea#exampleFormControlTextarea1.form-control(rows='3', placeholder='Your message')
+            .sendForm
+                a(class="btnPrimary")
+                    |   Send
