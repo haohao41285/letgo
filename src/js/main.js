@@ -1,4 +1,4 @@
-
+//không có gì đâu..hihi
 //Menu
 // không có gì đâu
 $(function ($) {
