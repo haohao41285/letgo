@@ -1,4 +1,4 @@
-//Menu
+//Menu thay đổi
 $(function ($) {
     $toggleMenu = $('.header__toggle');
     $toggleMenu.bind('click', function (e) {
