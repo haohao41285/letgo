@@ -1,5 +1,6 @@
 
 //Menu
+// không có gì đâu
 $(function ($) {
     $toggleMenu = $('.header__toggle');
     $toggleMenu.bind('click', function (e) {
